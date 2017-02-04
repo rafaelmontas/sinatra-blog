@@ -1,0 +1,5 @@
+development :
+  adapter: sqlite3
+  encoding: unicode
+  database: development
+  host: localhost
