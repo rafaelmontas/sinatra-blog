@@ -3,13 +3,11 @@ require 'sinatra/activerecord'
 require './config/environments'
 require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
+require_relative 'models/post.rb'
 
 enable :sessions
 
-class Post < ActiveRecord::Base
-  validates :title, presence: true, length: { minimum: 5 }
-  validates :body, presence: true
-end
+
 
 helpers do
   def title
