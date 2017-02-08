@@ -21,6 +21,11 @@ helpers do
   end
 end
 
+helpers do
+  include Rack::Utils
+  alias_method :h, :escape_html
+end
+
 # Get all posts
 get '/' do
   @posts = Post.order("created_at DESC")
